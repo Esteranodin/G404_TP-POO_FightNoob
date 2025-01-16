@@ -1,5 +1,7 @@
 /* primary-black : hex #1f1e1e */
 
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -8,7 +10,8 @@ html {
     font-size: 62.5%;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
 }
@@ -17,14 +20,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:0;
-    font-family: 'Germania One', cursive;
+    margin: 0;
+    font-family: "Jacquard 12", serif;
     font-size: 3vw;
     overflow: hidden;
 }
 
 .title {
-    font-size: 5vw;
+    font-size: 7vw;
+
 }
 
 .subtitle {
@@ -56,50 +60,60 @@ body {
     height: 100%;
 }
 
-#inner-container > main {
-
+#inner-container>main {
     width: 65%;
     height: 75%;
-
-
-    background: rgba(255,255,255,0.6);
+    background: rgba(232, 220, 205, 0.708);
 }
 
 h1 {
     position: absolute;
-    top: 25px;
-    left: 25px;
-    margin:0;
-    font-size: 2.5vw;
+    top: 20px;
+    left: 20px;
+    margin: 0;
+    font-size: 4vw;
+    letter-spacing: 0.3vw;
 }
 
 #shield {
-    width:6vw;
+    width: 8vw;
     position: absolute;
     left: calc(50% - 8px);
     transform: translateX(-50%);
-    top:2%
+    top: 5%;
+    border-radius: 10px 100px / 120px;
+
 }
 
 #game-log {
-    padding-top:3%;
+    padding-top: 3%;
     height: 100%;
-    overflow-y: auto;
+    /* overflow-y: auto; */
 }
 
 #game-log ul {
     list-style-type: none;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
+    font-size: 4vw;
 }
 
 #game-log figure {
-    margin:0;
+    margin: 0;
 }
 
 #game-log li:first-child {
-    margin-bottom: 3rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
     text-align: center;
+    letter-spacing: .2rem;
+}
+
+input[type=image] {
+    margin-left: 3em;
+    margin-top: 2em;
+    width: 15vw;
+    border-radius: 25% 10%;
 }
 
 /* Etat du jeu */
@@ -107,7 +121,7 @@ li.game-state {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom:10rem;
+    margin-bottom: 10rem;
 }
 
 li.game-state img {
@@ -184,26 +198,31 @@ li.game-end img {
 /* Animated clouds */
 .cloud {
     position: absolute;
-    z-index:0;
+    z-index: 0;
     opacity: 0.8;
     animation: cloudPassingBy linear infinite;
 }
 
 #cloud1 {
-    top:5vw;
-    left:-20vw;
+    top: 5vw;
+    left: -20vw;
     width: 20%;
     animation-duration: 50s;
 }
 
 #cloud2 {
-    top:10vw;
-    left:-20vw;
+    top: 10vw;
+    left: -20vw;
     width: 20%;
     animation-duration: 30s;
 }
 
 @keyframes cloudPassingBy {
-    from { transform: translateX(0px); }
-    to { transform: translateX(600%); }
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(600%);
+    }
 }

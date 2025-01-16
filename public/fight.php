@@ -1,8 +1,13 @@
 <?php 
-require_once "./components/htmlStart.php"
+
+require_once "../utils/autoloader.php";
+
+$test = new HeroesRepository;
+
+// require_once "./components/htmlStart.php";
+
+
 
 ?>
 
-
-<!-- déroulement graphique du combat -->
-
+<h1>Ta soeur bat le beurre</h1>

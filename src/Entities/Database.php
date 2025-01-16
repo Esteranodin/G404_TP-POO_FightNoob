@@ -9,7 +9,7 @@ final class Database
         if (self::$pdo === null){
             try {
                 $host = "localhost";
-                // $dbname = "nom bdd";
+                $dbname = "fightnoob_td";
                 $login = "root";
                 $password = "";
 

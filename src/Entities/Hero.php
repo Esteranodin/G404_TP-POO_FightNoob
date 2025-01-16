@@ -4,6 +4,7 @@ class Hero
 {
     // Propriétés
  
+    
     // Méthode magique
   
 
