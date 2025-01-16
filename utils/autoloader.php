@@ -18,6 +18,9 @@ spl_autoload_register(function ($className) {
         case substr($className, -8) === 'Contract':
             $directory = 'Interfaces';
             break;
+        case substr($className, -7) === 'Service':
+            $directory = 'Services';
+            break;
         default:
             $directory = 'Entities';
             break;

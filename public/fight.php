@@ -1,13 +1,13 @@
 <?php 
-
-require_once "../utils/autoloader.php";
-
-$test = new HeroesRepository;
-
 // require_once "./components/htmlStart.php";
 
 
+// A SUPPRIMER une fois le require once html start reactivé
+require_once '../utils/autoloader.php';
+
+$repository = new HeroesRepository();
+
+var_dump();
 
 ?>
 
-<h1>Ta soeur bat le beurre</h1>

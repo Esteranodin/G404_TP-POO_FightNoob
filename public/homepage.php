@@ -1,5 +1,7 @@
 <?php
-require_once "./components/htmlStart.php"
+require_once "./components/htmlStart.php";
+
+$heroTest = new Hero(1);
 
 ?>
 
@@ -16,7 +18,12 @@ require_once "./components/htmlStart.php"
                 <li >Choisis ton perso</li>
                 <li >
                 <form action="../public/fight.php" method="post"> 
-                    <input type="image" name="idHero" value="" src="./assets/images/persoChoiceKnight.jpg" alt="Chevalier">
+                    <input type="image" name="idHero" value="<?=htmlspecialchars($heroTest->getIdHero());?>" src="./assets/images/persoChoiceKnight.jpg" alt="Chevalier">
+                </form>   
+                </li>
+                <li >
+                <form action="../public/fight.php" method="post"> 
+                    <input type="image" name="idHero" value="" src="./assets/images/knight.png" alt="Chevalier">
                 </form>   
                 </li>
 

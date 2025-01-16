@@ -18,10 +18,6 @@
     return $heroDatas;
 
     }
-
 }
-var_dump($heroDatas);
-
-
 
 ?>
