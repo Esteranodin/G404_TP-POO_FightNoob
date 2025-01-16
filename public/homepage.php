@@ -1,7 +1,7 @@
 <?php
 require_once "./components/htmlStart.php";
 
-$heroTest = new Hero(1);
+$heroTest = new Hero(1, "Chouk");
 
 ?>
 

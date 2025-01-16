@@ -7,7 +7,7 @@ require_once '../utils/autoloader.php';
 
 $repository = new HeroesRepository();
 
-var_dump();
+// var_dump();
 
 ?>
 
