@@ -4,4 +4,5 @@
         <div id="inner-container">
             <header>
                 <h1>Fight Noob</h1>
+                <img id="shield" src="./assets/images/shield.png" alt="Logo du jeu Fight Noob">
             </header>

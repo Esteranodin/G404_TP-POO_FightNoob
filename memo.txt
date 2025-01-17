@@ -1,0 +1,9 @@
+évolutions possibles :
+
+    -> faire une homepage dédiée pour choix : prendre un perso existant ou création de héro
+    et donc une page de choix de héros + une page de création avec CRUD bdd associée
+
+    -> faire une classse parent de monstre avec traits communs + classe enfant pour donner des caracs et une image unique a chaque monstre
+
+    -> 
+

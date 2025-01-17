@@ -6,14 +6,16 @@ class Hero
     private int $idHero;
     private string $nameHero;
     private int $pointsVieHero;
+    private string $imgPath;
 
     // Méthode magique
 
-    public function __construct(int $idHero, string $nameHero)
+    public function __construct(int $idHero, string $nameHero, string $imgPath)
     {
         $this->idHero = $idHero;
         $this->nameHero = $nameHero;
         // $this->pointsVieHero = $pointsVieHero;
+        $this->imgPath = $imgPath;
     }
 
     // Geter & Seter
@@ -27,6 +29,12 @@ class Hero
     {
         return $this->nameHero;
     }
+
+    public function getimgPath()
+    {
+        return $this->imgPath;
+    }
+
 
 
     // Méthodes 

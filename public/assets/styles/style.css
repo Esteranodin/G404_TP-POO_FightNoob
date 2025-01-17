@@ -27,12 +27,13 @@ body {
 }
 
 .title {
+    margin-top: 2vw;
     font-size: 7vw;
-
 }
 
 .subtitle {
     font-size: 3.5vw;
+    margin-left: 4vw;
 }
 
 #global-container {
@@ -68,8 +69,8 @@ body {
 
 h1 {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 2vw;
+    left: 2vw;
     margin: 0;
     font-size: 4vw;
     letter-spacing: 0.3vw;
@@ -88,33 +89,74 @@ h1 {
 #game-log {
     padding-top: 3%;
     height: 100%;
-    /* overflow-y: auto; */
+    /* overflow-y: hidden; */
 }
 
 #game-log ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    margin: 0;
-    font-size: 4vw;
+    display: flex;
+    flex-direction: column;
 }
 
-#game-log figure {
+/* #game-log figure {
     margin: 0;
-}
+} */
 
 #game-log li:first-child {
-    margin-top: 4rem;
-    margin-bottom: 2rem;
+    list-style: none;
     text-align: center;
     letter-spacing: .2rem;
 }
 
-input[type=image] {
-    margin-left: 3em;
-    margin-top: 2em;
-    width: 15vw;
-    border-radius: 25% 10%;
+#containerCard {
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3vw;
 }
+
+#containerCard p {
+    margin: 0.8vw;
+}
+
+#cardHeroChoice {
+    margin-top: 2em;
+    border-radius: 5% 10%;
+    border: none;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+}
+
+#cardHeroChoice img {
+    width: 100%;
+    border-radius: 5% 10%;
+    border: none;
+    display: block;
+}
+
+#cardMonsterChoice {
+    margin-top: 2em;
+    border-radius: 5% 10%;
+    border: none;
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+}
+
+#cardMonsterChoice img {
+    width: 100%;
+    border-radius: 5% 10%;
+    border: none;
+    display: block;
+}
+
 
 /* Etat du jeu */
 li.game-state {

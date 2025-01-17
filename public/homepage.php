@@ -1,7 +1,11 @@
 <?php
 require_once "./components/htmlStart.php";
 
-$heroTest = new Hero(1, "Chouk");
+// A SUPPRIMER une fois le require once html start reactivé
+// require_once '../utils/autoloader.php';
+
+$heroesRepository = new HeroesRepository();
+$heroes = $heroesRepository->findAllHeroes();
 
 ?>
 
@@ -13,22 +17,28 @@ $heroTest = new Hero(1, "Chouk");
     <main>
         <img id="shield" src="./assets/images/shield.png" alt="Logo du jeu Fight Noob">
         <section id="game-log">
-            <ul>
-                <li class="title">Que le combat commence !</li>
-                <li >Choisis ton perso</li>
-                <li >
-                <form action="../public/fight.php" method="post"> 
-                    <input type="image" name="idHero" value="<?=htmlspecialchars($heroTest->getIdHero());?>" src="./assets/images/persoChoiceKnight.jpg" alt="Chevalier">
-                </form>   
-                </li>
-                <li >
-                <form action="../public/fight.php" method="post"> 
-                    <input type="image" name="idHero" value="" src="./assets/images/knight.png" alt="Chevalier">
-                </form>   
-                </li>
 
-                <script src="./assets/scripts/dragon.js"></script>
+            <ul>
+                <li class="title">Choisis ton perso</li>
+                <div id="containerCard">
+                    <?php foreach ($heroes as $hero) {
+                    ?>
+                        <form action="./choiceMonstersFight.php" method="post">
+                            <li>
+                                <input type="hidden" name="idHero" value="<?= htmlspecialchars($hero->getIdHero()); ?>">
+                                <button id="cardHeroChoice" type="submit">
+                                    <img src="<?= htmlspecialchars($hero->getimgPath()); ?>" alt="Chevalier"></button>
+                                    <p><?= htmlspecialchars($hero->getNameHero()); ?></p>
+                            </li>
+                        </form>
+
+                    <?php
+                    }
+                    ?>
+                </div>
             </ul>
+
+            <!-- <script src="./assets/scripts/dragon.js"></script> -->
         </section>
     </main>
     </div>

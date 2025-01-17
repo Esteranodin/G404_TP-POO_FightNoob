@@ -5,3 +5,5 @@ $testSecu = new HeroService();
 $testSecu -> isValid($_POST["pseudo"]);
 
 ?>
+
+<!-- A APPELER SUR PAGE CONCERNEES -->
