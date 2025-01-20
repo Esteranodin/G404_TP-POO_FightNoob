@@ -7,3 +7,6 @@ $testSecu -> isValid($_POST["pseudo"]);
 ?>
 
 <!-- A APPELER SUR PAGE CONCERNEES -->
+
+
+<!-- faire un process -->

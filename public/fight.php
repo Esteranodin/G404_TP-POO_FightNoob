@@ -6,18 +6,22 @@ require_once "./components/htmlStart.php";
 
 session_start();
 
-$_SESSION["monster"] = $_POST["nameMonster"];
+/**
+ * @var Hero $hero
+ */
+$hero = $_SESSION['hero'];
 
-$heroesRepository = new HeroesRepository();
-// $heroes = $heroesRepository->findByHeroId();
 
-$monsters = [
-    $monster1 = new Monster ("RAGADU", 300, "./assets/images/monster1.png"),
-    $monster2 = new Monster ("TAPETEEEE", 300, "./assets/images/monster2.png"),
-];
+if( $_POST["nameMonster"] === "Ragadu"){
+    $monster = new Monster("Ragadu", 300, "./assets/images/monster1.png");
 
-// var_dump($_POST);
-// var_dump($_SESSION);
+} else if ($_POST["nameMonster"] === "Tapeteee" ) {
+    $monster = new Monster("Tapeteee", 300, "./assets/images/monster2.png");
+}
+
+// pour future page si besoin de récup le monstre
+$_SESSION["monster"] = $monster;
+
 
 ?>
 
@@ -29,7 +33,7 @@ $monsters = [
         <section id="game-log">
             <div>
    <p class="title">Que le combat commence !</p>
-   <img src="" alt="Chevalier">
+   <img src="" alt="image du héro">
             </div>
             <!-- <script src="./assets/scripts/dragon.js"></script> -->
         </section>

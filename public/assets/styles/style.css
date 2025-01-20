@@ -28,7 +28,7 @@ body {
 
 .title {
     margin-top: 2vw;
-    font-size: 7vw;
+    font-size: 5vw;
 }
 
 .subtitle {
@@ -119,6 +119,7 @@ h1 {
 
 #containerCard p {
     margin: 0.8vw;
+    font-size: 3vw;   
 }
 
 #cardHeroChoice {
@@ -137,6 +138,7 @@ h1 {
     border-radius: 5% 10%;
     border: none;
     display: block;
+    cursor: pointer;
 }
 
 #cardMonsterChoice {
@@ -155,11 +157,13 @@ h1 {
     border-radius: 5% 10%;
     border: none;
     display: block;
+    cursor: pointer;
+
 }
 
 
 /* Etat du jeu */
-li.game-state {
+/* li.game-state {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -179,10 +183,10 @@ li.game-state figure {
 li.game-state figure:first-child {
     flex-direction: row-reverse;
     justify-content: flex-start;
-}
+} */
 
 /* Journal de partie */
-li.round-log {
+/* li.round-log {
     margin: 2rem 5rem;
 }
 
@@ -235,7 +239,7 @@ li.game-end p {
 
 li.game-end img {
     width: 50%;
-}
+} */
 
 /* Animated clouds */
 .cloud {

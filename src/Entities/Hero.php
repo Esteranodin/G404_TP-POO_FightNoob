@@ -1,40 +1,30 @@
 <?php
+// classe en abstract pour faire les types de héros
 
-class Hero
+
+
+class Hero extends Character
 {
-    // Propriétés
+
+    // Propriétés autre que celles de la classe parent
     private int $idHero;
-    private string $nameHero;
-    private int $pointsVieHero;
-    private string $imgPath;
 
-    // Méthode magique
 
-    public function __construct(int $idHero, string $nameHero, string $imgPath)
+    // Méthode magique avec toujours le construc du parent
+
+    public function __construct(int $idHero, string $name, int $health, string $imgPath)
     {
+        parent::__construct($name, $health, $imgPath);
+
         $this->idHero = $idHero;
-        $this->nameHero = $nameHero;
-        // $this->pointsVieHero = $pointsVieHero;
-        $this->imgPath = $imgPath;
     }
 
     // Geter & Seter
 
-    public function getIdHero() : int
+    public function getIdHero(): int
     {
         return $this->idHero;
     }
-
-    public function getNameHero() : string
-    {
-        return $this->nameHero;
-    }
-
-    public function getimgPath() : string
-    {
-        return $this->imgPath;
-    }
-
 
 
     // Méthodes 
@@ -42,6 +32,4 @@ class Hero
     /**
      * Description méthode
      */
-
-   
 }

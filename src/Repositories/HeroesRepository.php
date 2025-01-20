@@ -27,7 +27,7 @@ class HeroesRepository extends AbstractRepository
     public function findByHeroId(int $idHero): ?Hero
     {
 
-        $sql = "SELECT `id`,`name` FROM `hero` WHERE id = :id";
+        $sql = "SELECT * FROM `hero` WHERE id = :id";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([
             ':id' => $idHero
@@ -36,11 +36,7 @@ class HeroesRepository extends AbstractRepository
         $datasHero = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($datasHero) {
-            $hero = [];
-            foreach ($datasHero as $dataHero) {
-                $hero[] = HeroMapper::mapToObject($dataHero);
-            }
-
+            $hero = HeroMapper::mapToObject($datasHero);
             return $hero;
         }
 

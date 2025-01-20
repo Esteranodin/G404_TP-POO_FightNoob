@@ -1,45 +1,14 @@
 <?php
+// cette classe en abstract et chaque type de monstre en classe enfant 
 
-class Monster
+class Monster extends Character
 {
-    // Propriétés
-    private string $nameMonster;
-    private int $pointsVieMonster;
-    private string $imgPathMonster;
-
-    // Méthode magique
    
-    public function __construct(string $nameMonster, int $pointsVieMonster,  string $imgPathMonster)
+    public function __construct(string $name, int $health, string $imgPath)
     {
-        $this->nameMonster = $nameMonster;
-        $this->pointsVieMonster = $pointsVieMonster;
-        $this->imgPathMonster = $imgPathMonster;
+        parent::__construct($name, $health, $imgPath);
+
     }
-
-    // Geter & Seter
-
-    public function getNameMonster() : string
-    {
-        return $this->nameMonster;
-    }
-
-    public function getPvMonster() : int
-    {
-        return $this->pointsVieMonster;
-    }
-
-    public function getimgPath() : string
-    {
-        return $this->imgPathMonster;
-    }
-
-
-    // Méthodes 
-
-    /**
-     * Description méthode
-     */
-
 
 }
 

@@ -15,7 +15,6 @@ $heroes = $heroesRepository->findAllHeroes();
     <?php require_once "./components/header.php" ?>
 
     <main>
-        <img id="shield" src="./assets/images/shield.png" alt="Logo du jeu Fight Noob">
         <section id="game-log">
 
             <ul>
@@ -27,8 +26,8 @@ $heroes = $heroesRepository->findAllHeroes();
                             <li>
                                 <input type="hidden" name="idHero" value="<?= htmlspecialchars($hero->getIdHero()); ?>">
                                 <button id="cardHeroChoice" type="submit">
-                                    <img src="<?= htmlspecialchars($hero->getimgPath()); ?>" alt="Chevalier"></button>
-                                    <p><?= htmlspecialchars($hero->getNameHero()); ?></p>
+                                    <img src="<?= htmlspecialchars($hero->getimgPath()); ?>" alt="image du Héro"></button>
+                                <p><?= htmlspecialchars($hero->getName()); ?></p>
                             </li>
                         </form>
 
