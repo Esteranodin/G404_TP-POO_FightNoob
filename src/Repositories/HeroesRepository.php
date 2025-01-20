@@ -15,8 +15,8 @@ class HeroesRepository extends AbstractRepository
         $stmt = $this->pdo->query($sql);
         $datasHeroes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        foreach ($datasHeroes as $dataHero) {
-            $heroes[] = HeroMapper::mapToObject($dataHero);  
+        foreach ($datasHeroes as $dataHeroes) {
+            $heroes[] = HeroMapper::mapToObject($dataHeroes);  
         }
 
         return $heroes;
@@ -24,7 +24,7 @@ class HeroesRepository extends AbstractRepository
 
 
 
-    public function findByHeroId(int $idHero): array
+    public function findByHeroId(int $idHero): ?Hero
     {
 
         $sql = "SELECT `id`,`name` FROM `hero` WHERE id = :id";
@@ -33,17 +33,25 @@ class HeroesRepository extends AbstractRepository
             ':id' => $idHero
         ]);
 
-        $datasHeroes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $datasHero = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if ($datasHeroes) {
-            $heroes = [];
-            foreach ($datasHeroes as $dataHero) {
-                $heroes[] = HeroMapper::mapToObject($dataHero);
+        if ($datasHero) {
+            $hero = [];
+            foreach ($datasHero as $dataHero) {
+                $hero[] = HeroMapper::mapToObject($dataHero);
             }
 
-            return $heroes;
+            return $hero;
         }
 
         return null;
     }
+
+
+    // public function create(Hero $hero) {
+
+    //     $sql = "INSERT INTO hero (name) VALUES (:name)";
+    //     $stmt = $this->pdo->prepare($sql);
+        
+    // }
 }

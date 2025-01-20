@@ -10,4 +10,6 @@ class HeroMapper implements MapperContract
             $datasHero["img_path"],
         );
     }
+
+    //beosin de faire une fonciton pour tranformer un objet en tableau ? 
 }

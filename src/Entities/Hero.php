@@ -20,17 +20,17 @@ class Hero
 
     // Geter & Seter
 
-    public function getIdHero()
+    public function getIdHero() : int
     {
         return $this->idHero;
     }
 
-    public function getNameHero()
+    public function getNameHero() : string
     {
         return $this->nameHero;
     }
 
-    public function getimgPath()
+    public function getimgPath() : string
     {
         return $this->imgPath;
     }

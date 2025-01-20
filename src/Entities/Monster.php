@@ -18,17 +18,17 @@ class Monster
 
     // Geter & Seter
 
-    public function getNameMonster()
+    public function getNameMonster() : string
     {
         return $this->nameMonster;
     }
 
-    public function getPvMonster()
+    public function getPvMonster() : int
     {
         return $this->pointsVieMonster;
     }
 
-    public function getimgPath()
+    public function getimgPath() : string
     {
         return $this->imgPathMonster;
     }
