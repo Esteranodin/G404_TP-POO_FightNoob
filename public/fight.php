@@ -10,13 +10,14 @@ $fightsManager = new FightsManager();
 $monster = $fightsManager->findMonster();
 $hero = $_SESSION["hero"];
 
+
+
 ?>
 
 <body>
     <?php require_once "./components/header.php" ?>
 
     <main>
-        <!-- <script defer src="./assets/scripts/play.js"></script> -->
         <section>
             <h2 class="subtitle">Round 1</h2>
             <hr>

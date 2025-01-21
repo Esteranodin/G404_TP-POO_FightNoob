@@ -40,7 +40,6 @@ $monsters = $fightsManager->createMonster();
                 </div>
             </ul>
 
-            <!-- <script src="./assets/scripts/play.js"></script> -->
         </section>
     </main>
     </section>

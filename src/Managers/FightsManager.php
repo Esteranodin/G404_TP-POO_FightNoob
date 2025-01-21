@@ -18,12 +18,12 @@ final class FightsManager
         $this->grattapok = new Grattapok();
     }
 
-    public function getHeroesRepository()
+    public function getHeroesRepository(): HeroesRepository
     {
         return $this->heroesRepository;
     }
 
-    public function findHero()
+    public function findHero(): Hero
     {
         if (!isset($_POST["idHero"])) {
             header('Location: ./fight.php?error');
@@ -42,9 +42,8 @@ final class FightsManager
         return $hero;
     }
 
-    public function createMonster()
+    public function createMonster(): array
     {
-
         $monsters = [
             $this->ragadu,
             $this->frenouille,
@@ -58,16 +57,15 @@ final class FightsManager
     {
         if ($_POST["nameMonster"] === "Ragadu") {
             return $monster = $this->ragadu;
-
+            $_SESSION["monster"] = $monster;
         } else if ($_POST["nameMonster"] === "Frenouille") {
             return $monster = $this->frenouille;
-
+            $_SESSION["monster"] = $monster;
         } else if ($_POST["nameMonster"] === "Grattapok") {
             return $monster = $this->grattapok;
+            $_SESSION["monster"] = $monster;
         }
-
-        $_SESSION["monster"] = $monster;
     }
 
+   
 }
-  
