@@ -40,7 +40,6 @@ $heroes = $heroesRepository->findAllHeroes();
             <!-- <script src="./assets/scripts/dragon.js"></script> -->
         </section>
     </main>
-    </div>
     </section>
 </body>
 

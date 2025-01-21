@@ -7,7 +7,7 @@ require_once "./components/htmlStart.php";
 $heroesRepository = new HeroesRepository();
 $hero = $heroesRepository->findByHeroId($_POST["idHero"]);
 
-if(!$hero){
+if (!$hero) {
     header('Location: ./fight.php');
     exit;
 }
@@ -57,7 +57,6 @@ $monsters = [
             <!-- <script src="./assets/scripts/dragon.js"></script> -->
         </section>
     </main>
-    </div>
     </section>
 </body>
 

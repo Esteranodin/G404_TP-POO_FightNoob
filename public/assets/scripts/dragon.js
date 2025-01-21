@@ -44,42 +44,40 @@ function initializeGame()
 	}
 }
 
-function displayGameState()
+// function displayGameState()
 
-{
-	document.write("<li class='game-state'>");
+// {
+// 	document.write("<li class='game-state'>");
 	
-	document.write("<figure> <img src='images/knight.png' alt='Chevalier'><figcaption> ");
+// 	document.write("<figure> <img src='images/knight.png' alt='Chevalier'><figcaption> ");
 
-	if(game.pvJoueur <= 0 )
+// 	if(game.pvJoueur <= 0 )
 	
-		document.write("GAME OVER");
+// 		document.write("GAME OVER");
 
-	else
+// 	else
 
-	{
-	document.write(game.pvJoueur +  " PV");
-	}
+// 	{
+// 	document.write(game.pvJoueur +  " PV");
+// 	}
 	
-	document.write("</figcaption></figure>");
+// 	document.write("</figcaption></figure>");
 
-	document.write("<figure><img src=\"images/dragon.png\" alt=\"Dragon\"><figcaption> ");
+// 	document.write("<figure><img src=\"images/dragon.png\" alt=\"Dragon\"><figcaption> ");
 
-	if (game.pvDragon <=0)
+// 	if (game.pvDragon <=0)
 
-	 document.write("GAME OVER");
+// 	 document.write("GAME OVER");
 	
-	else
+// 	else
 
-	{
-	document.write(game.pvDragon + " PV");
-	}
+// 	{
+// 	document.write(game.pvDragon + " PV");
+// 	}
 
-	document.write("</figcaption></figure> </li>");
+// 	document.write("</figcaption></figure> </li>");
 	
-	
-	
-}
+// }
 
 function displayEndGame()
 {
@@ -145,11 +143,11 @@ function displayRound(attacks,pdomage)
 {
 	if(attacks == "player")
 	{
-	  document.write('<li class="round-log player-attacks"><h2 class="subtitle">'+'Tour n°'+game.round+'</h2><img src="images/knight-winner.png" alt="Chevalier"><p>Vous êtes le plus rapide, vous attaquez le dragon et lui infligez '+pdomage+' points de dommage !</p></li>');
+	  document.write('<li class="round player-attacks"><h2 class="subtitle">'+'Tour n°'+game.round+'</h2><img src="images/knight-winner.png" alt="Chevalier"><p>Vous êtes le plus rapide, vous attaquez le dragon et lui infligez '+pdomage+' points de dommage !</p></li>');
 	}
 	else 
 	{
-	  document.write('<li class="round-log dragon-attacks"><h2 class="subtitle">Tour n°'+game.round+'</h2> <img src="images/dragon-winner.png" alt="Dragon"><p>Le dragon prend l\'initiative, vous attaque et vous inflige '+pdomage+' points de dommage !</p> </li>');
+	  document.write('<li class="round dragon-attacks"><h2 class="subtitle">Tour n°'+game.round+'</h2> <img src="images/dragon-winner.png" alt="Dragon"><p>Le dragon prend l\'initiative, vous attaque et vous inflige '+pdomage+' points de dommage !</p> </li>');
 	}
 }
 

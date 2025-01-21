@@ -26,6 +26,23 @@ body {
     overflow: hidden;
 }
 
+h1 {
+    position: absolute;
+    top: 2vw;
+    left: 2vw;
+    margin: 0;
+    font-size: 4vw;
+    letter-spacing: 0.3vw;
+    font-variant: small-caps;
+}
+
+hr {
+    border: solid;
+    border-color: darkgoldenrod;
+    width: 30vw;
+
+}
+
 .title {
     margin-top: 2vw;
     font-size: 5vw;
@@ -67,14 +84,6 @@ body {
     background: rgba(232, 220, 205, 0.708);
 }
 
-h1 {
-    position: absolute;
-    top: 2vw;
-    left: 2vw;
-    margin: 0;
-    font-size: 4vw;
-    letter-spacing: 0.3vw;
-}
 
 #shield {
     width: 8vw;
@@ -163,7 +172,8 @@ h1 {
 
 
 /* Etat du jeu */
-/* li.game-state {
+li.game-state {
+    list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,50 +193,54 @@ li.game-state figure {
 li.game-state figure:first-child {
     flex-direction: row-reverse;
     justify-content: flex-start;
-} */
-
-/* Journal de partie */
-/* li.round-log {
-    margin: 2rem 5rem;
 }
 
-li.round-log:after {
+/* Journal de partie */
+div.round {
+    list-style: none;
+    margin: 8rem 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+div.round:after {
     content: "";
     display: table;
     clear: both;
 }
 
-li.round-log img {
+div.round img {
     width: 30%;
+    justify-items: center;
 }
 
-li.round-log h2 {
+div.round h2 {
     width: 30%;
     min-width: 300px;
     margin: 0 auto;
     text-align: center;
-    border-bottom: 5px dotted black;
 }
 
-li.round-log p {
-    padding-top: 3rem;
+div.round p {
+    display: flex;
+   
 }
 
-li.player-attacks img {
+/* li.player-attacks img {
     float: left;
     margin-right: 2rem;
-}
+} */
 
-li.dragon-attacks img {
+/* li.dragon-attacks img {
     float: right;
     margin-left: 2rem;
-}
+} */
 
-li.dragon-attacks p {
+/* li.dragon-attacks p {
     text-align: right;
-}
+} */
 
-li.game-end {
+/* li.game-end {
     display: flex;
     flex-direction: column;
     align-items: center;
