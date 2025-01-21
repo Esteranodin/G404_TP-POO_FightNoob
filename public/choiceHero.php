@@ -37,7 +37,7 @@ $heroes = $heroesRepository->findAllHeroes();
                 </div>
             </ul>
 
-            <!-- <script src="./assets/scripts/dragon.js"></script> -->
+            <!-- <script src="./assets/scripts/play.js"></script> -->
         </section>
     </main>
     </section>

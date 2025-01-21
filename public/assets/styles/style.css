@@ -172,7 +172,7 @@ hr {
 
 
 /* Etat du jeu */
-li.game-state {
+div.game-state {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -180,17 +180,17 @@ li.game-state {
     margin-bottom: 10rem;
 }
 
-li.game-state img {
+div.game-state img {
     width: 10vw;
 }
 
-li.game-state figure {
+div.game-state figure {
     display: flex;
     align-items: center;
     width: 100%;
 }
 
-li.game-state figure:first-child {
+div.game-state figure:first-child {
     flex-direction: row-reverse;
     justify-content: flex-start;
 }

@@ -28,8 +28,8 @@ $_SESSION["monster"] = $monster;
     <?php require_once "./components/header.php" ?>
 
     <main>
-            <script src="./assets/scripts/dragon.js"></script>
-
+        <!-- <script defer src="./assets/scripts/play.js"></script> -->
+        <section>
         <div class="round player-attacks">
             <h2 class="subtitle">Round 1</h2>
             <hr>
@@ -38,16 +38,17 @@ $_SESSION["monster"] = $monster;
         </div>
 
         <!-- Etat du jeu -->
-        <!-- <li class="game-state">
+        <div class="game-state">
             <figure>
-                <img src="images/knight.png" alt="Chevalier">
+                <img src="<?= htmlspecialchars($hero->getimgPath()); ?>" alt="image du Héro">
                 <figcaption>124 PV</figcaption>
             </figure>
             <figure>
-                <img src="images/dragon.png" alt="Dragon">
+                <img src="<?= htmlspecialchars($monster->getimgPath()); ?>" alt="image du monstre">
                 <figcaption>124 PV</figcaption>
             </figure>
-        </li> -->
+        </div>
+        </section>
         <!-- 
         Journal de la partie - TOUR N°2 -->
         <!-- <li class="round player-attacks">
@@ -102,7 +103,7 @@ $_SESSION["monster"] = $monster;
         </li> -->
 
 
-        </section>
     </main>
+</section>
 
 </body>
