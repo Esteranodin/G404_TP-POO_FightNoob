@@ -1,13 +1,14 @@
 <?php
-// require_once "./components/htmlStart.php";
+require_once "./components/htmlStart.php";
 
 // A SUPPRIMER une fois le require once html start reactivé
-require_once '../utils/autoloader.php';
+// require_once '../utils/autoloader.php';
 
 session_start();
 
 $fightsManager = new FightsManager();
 $monster = $fightsManager->findMonster();
+$hero = $_SESSION["hero"];
 
 ?>
 
@@ -17,9 +18,9 @@ $monster = $fightsManager->findMonster();
     <main>
         <!-- <script defer src="./assets/scripts/play.js"></script> -->
         <section>
-        <div class="round player-attacks">
             <h2 class="subtitle">Round 1</h2>
             <hr>
+            <div class="round">
             <img src="<?= htmlspecialchars($hero->getimgPath()); ?>" alt="image du Héro">
             <p>Vous êtes le plus rapide, vous attaquez et infligez 11 points de dommage au monstre !</p>
         </div>

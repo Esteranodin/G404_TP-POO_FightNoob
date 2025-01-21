@@ -1,5 +1,4 @@
 <?php
-// require_once "../../utils/autoloader.php";
 
 // ajouter secu = enfant de securiteManager
 
@@ -17,6 +16,11 @@ final class FightsManager
         $this->ragadu  = new Ragadu;
         $this->frenouille = new Frenouille;
         $this->grattapok = new Grattapok();
+    }
+
+    public function getHeroesRepository()
+    {
+        return $this->heroesRepository;
     }
 
     public function findHero()
@@ -64,4 +68,6 @@ final class FightsManager
 
         $_SESSION["monster"] = $monster;
     }
+
 }
+  

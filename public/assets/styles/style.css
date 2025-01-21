@@ -40,7 +40,7 @@ hr {
     border: solid;
     border-color: darkgoldenrod;
     width: 30vw;
-
+    margin: 0;
 }
 
 .title {
@@ -126,6 +126,13 @@ hr {
     gap: 3vw;
 }
 
+#containerCard li {
+    list-style: none;
+    text-align: center;
+    letter-spacing: .2rem; 
+}
+
+
 #containerCard p {
     margin: 0.8vw;
     font-size: 3vw;   
@@ -137,8 +144,6 @@ hr {
     border: none;
     width: 15vw;
     display: flex;
-    flex-direction: column;
-    text-align: center;
     padding: 0;
 }
 
@@ -154,10 +159,8 @@ hr {
     margin-top: 2em;
     border-radius: 5% 10%;
     border: none;
-    width: 10vw;
+    width: 15vw;
     display: flex;
-    flex-direction: column;
-    text-align: center;
     padding: 0;
 }
 
@@ -196,9 +199,15 @@ div.game-state figure:first-child {
 }
 
 /* Journal de partie */
+.round {
+    display: flex;
+    flex-direction: column;
+}
+
 div.round {
     list-style: none;
-    margin: 8rem 5rem;
+    margin: 2rem 3rem;
+    text-align: center;
     display: flex;
     flex-direction: column;
 }
@@ -221,10 +230,10 @@ div.round h2 {
     text-align: center;
 }
 
-div.round p {
+/* div.round p {
     display: flex;
    
-}
+} */
 
 /* li.player-attacks img {
     float: left;

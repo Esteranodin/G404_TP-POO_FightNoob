@@ -5,7 +5,4 @@
     2. création de héro
     et donc une page de création avec CRUD bdd associée
 
-    -> faire une classse parent de monstre avec traits communs + classe enfant pour donner des caracs et une image unique a chaque monstre
-
-    -> 
 
