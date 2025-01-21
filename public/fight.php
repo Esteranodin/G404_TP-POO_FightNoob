@@ -29,12 +29,14 @@ $hero = $_SESSION["hero"];
         <div class="game-state">
             <figure>
                 <img src="<?= htmlspecialchars($hero->getimgPath()); ?>" alt="image du Héro">
-                <figcaption>124 PV</figcaption>
+                <figcaption>124 pv</figcaption>
             </figure>
+            <h2>vs</h2>
             <figure>
                 <img src="<?= htmlspecialchars($monster->getimgPath()); ?>" alt="image du monstre">
-                <figcaption>124 PV</figcaption>
+                <figcaption>124 pv</figcaption>
             </figure>
+            
         </div>
         </section>
         <!-- 

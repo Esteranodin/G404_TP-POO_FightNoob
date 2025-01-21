@@ -36,11 +36,15 @@ h1 {
     font-variant: small-caps;
 }
 
+h2 {
+    margin: 3vw 4vw 0 0;
+}
+
 hr {
     border: solid;
     border-color: darkgoldenrod;
     width: 30vw;
-    margin: 0;
+    margin: 1vw 0 2vw 0;
 }
 
 .title {
@@ -115,7 +119,7 @@ hr {
 #game-log li:first-child {
     list-style: none;
     text-align: center;
-    letter-spacing: .2rem;
+    letter-spacing: 0.2rem;
 }
 
 #containerCard {
@@ -129,13 +133,13 @@ hr {
 #containerCard li {
     list-style: none;
     text-align: center;
-    letter-spacing: .2rem; 
+    letter-spacing: 0.2rem;
 }
 
 
 #containerCard p {
     margin: 0.8vw;
-    font-size: 3vw;   
+    font-size: 3vw;
 }
 
 #cardHeroChoice {
@@ -180,7 +184,8 @@ div.game-state {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10rem;
+    gap: 2vw;
+    /* margin-bottom: 10rem; */
 }
 
 div.game-state img {
@@ -193,23 +198,30 @@ div.game-state figure {
     width: 100%;
 }
 
-div.game-state figure:first-child {
-    flex-direction: row-reverse;
-    justify-content: flex-start;
+div.game-state figure {
+    gap: 2vw;
+}
+
+div.game-state figure img {
+    height: 8vw;
+    width: auto;
+}
+
+div.game-state h2 {
+    color: brown;
+    font-size: 6vw;
+    letter-spacing: 0.3rem;
+    margin: 0;
 }
 
 /* Journal de partie */
-.round {
-    display: flex;
-    flex-direction: column;
-}
 
 div.round {
     list-style: none;
     margin: 2rem 3rem;
     text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 div.round:after {
@@ -219,21 +231,23 @@ div.round:after {
 }
 
 div.round img {
-    width: 30%;
-    justify-items: center;
+    width: 20%;
 }
 
-div.round h2 {
+/* div.round h2 {
     width: 30%;
     min-width: 300px;
     margin: 0 auto;
     text-align: center;
-}
-
-/* div.round p {
-    display: flex;
-   
 } */
+
+div.round p {
+    padding-left: 3vw;
+    font-size: 2vw;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+
+}
 
 /* li.player-attacks img {
     float: left;

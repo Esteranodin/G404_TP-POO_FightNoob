@@ -60,10 +60,10 @@ final class FightsManager
             return $monster = $this->ragadu;
 
         } else if ($_POST["nameMonster"] === "Frenouille") {
-            $monster = $this->frenouille;
+            return $monster = $this->frenouille;
 
         } else if ($_POST["nameMonster"] === "Grattapok") {
-            $monster = $this->grattapok;
+            return $monster = $this->grattapok;
         }
 
         $_SESSION["monster"] = $monster;
