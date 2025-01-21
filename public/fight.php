@@ -6,25 +6,8 @@ require_once '../utils/autoloader.php';
 
 session_start();
 
-/**
- * @var Hero $hero
- */
-$hero = $_SESSION['hero'];
-
-
-if ($_POST["nameMonster"] === "Ragadu") {
-   $monster = new Ragadu();
-    // $monster = new Monster("Ragadu", 300, "./assets/images/radagu.png");
-} else if ($_POST["nameMonster"] === "Frenouille") {
-    $monster = new Frenouille();
-
-} else if ($_POST["nameMonster"] === "Grattapok") {
-    $monster = new Grattapok();
-}
-
-// pour future page par exemple resultat si besoin de récup le monstre
-
-$_SESSION["monster"] = $monster;
+$fightsManager = new FightsManager();
+$monster = $fightsManager->findMonster();
 
 ?>
 
