@@ -4,25 +4,11 @@ require_once "./components/htmlStart.php";
 // A SUPPRIMER une fois le require once html start reactivé
 // require_once '../utils/autoloader.php';
 
-$heroesRepository = new HeroesRepository();
-$hero = $heroesRepository->findByHeroId($_POST["idHero"]);
-
-if (!$hero) {
-    header('Location: ./fight.php');
-    exit;
-}
-
 session_start();
 
-$_SESSION["hero"] = $hero;
-
-
-
-// faire des objets enfant pour monstre différent
-$monsters = [
-    $monster1 = new Monster("Ragadu", 300, "./assets/images/monster1.png"),
-    $monster2 = new Monster("Tapeteee", 300, "./assets/images/monster2.png"),
-];
+$fightsManager = new FightsManager();
+$hero = $fightsManager->findHero();
+$monsters = $fightsManager->createMonster();
 
 ?>
 

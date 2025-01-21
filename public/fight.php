@@ -1,8 +1,8 @@
 <?php
-require_once "./components/htmlStart.php";
+// require_once "./components/htmlStart.php";
 
 // A SUPPRIMER une fois le require once html start reactivé
-// require_once '../utils/autoloader.php';
+require_once '../utils/autoloader.php';
 
 session_start();
 
@@ -13,14 +13,18 @@ $hero = $_SESSION['hero'];
 
 
 if ($_POST["nameMonster"] === "Ragadu") {
-    $monster = new Monster("Ragadu", 300, "./assets/images/monster1.png");
-} else if ($_POST["nameMonster"] === "Tapeteee") {
-    $monster = new Monster("Tapeteee", 300, "./assets/images/monster2.png");
+   $monster = new Ragadu();
+    // $monster = new Monster("Ragadu", 300, "./assets/images/radagu.png");
+} else if ($_POST["nameMonster"] === "Frenouille") {
+    $monster = new Frenouille();
+
+} else if ($_POST["nameMonster"] === "Grattapok") {
+    $monster = new Grattapok();
 }
 
-// pour future page si besoin de récup le monstre
-$_SESSION["monster"] = $monster;
+// pour future page par exemple resultat si besoin de récup le monstre
 
+$_SESSION["monster"] = $monster;
 
 ?>
 
