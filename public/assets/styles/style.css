@@ -44,6 +44,7 @@ hr {
 }
 
 button {
+    margin : 1vw;
     padding: 1vw;
     cursor: pointer;
     color:blanchedalmond;
@@ -196,9 +197,9 @@ div.game-state {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2vw;
     /* margin-bottom: 10rem; */
     font-variant: small-caps;
+
 }
 
 div.game-state img {
@@ -209,6 +210,7 @@ div.game-state figure {
     display: flex;
     align-items: center;
     width: 100%;
+    margin : 0 0 0 3vw;
 }
 
 div.game-state figure {
@@ -216,7 +218,7 @@ div.game-state figure {
 }
 
 div.game-state figure img {
-    height: 8vw;
+    height: 7vw;
     width: auto;
 }
 
@@ -231,10 +233,11 @@ div.game-state h2 {
 
 div.round {
     list-style: none;
-    margin: 2rem 3rem;
+    margin: 2vw 3vw 4vw 3vw;
     text-align: center;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+
 }
 
 div.round:after {
@@ -255,11 +258,11 @@ div.round img {
 } */
 
 div.round p {
-    padding-left: 3vw;
+    display: flex;
     font-size: 2vw;
     font-weight: 600;
     letter-spacing: 0.2rem;
-
+    flex: 1;
 }
 
 /* li.player-attacks img {

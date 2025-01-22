@@ -1,16 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    let fightWithDices = document.querySelector("#rollDice");
-    let heroHealth = document.querySelector("#heroHealth");
-    let monsterHealth = document.querySelector("#monsterHealth");
+    const fightWithDices = document.querySelector("#rollDice");
+    const battleMsgHero = document.querySelector("#battleHeroMsg");
+    const battleMonsterMsg = document.querySelector("#battleMonsterMsg");
+
+    const heroHealth = document.querySelector("#heroHealth");
+    const monsterHealth = document.querySelector("#monsterHealth");
 
     fightWithDices.addEventListener("click", handleFight);
 
     function handleFight() {
 
         // transforme la vie récup en nombre entier
-        let heroHealthToInt = parseInt(heroHealth.textContent);
-        let monsterHealthToInt = parseInt(monsterHealth.textContent);
+        const heroHealthToInt = parseInt(heroHealth.textContent);
+        const monsterHealthToInt = parseInt(monsterHealth.textContent);
 
         // à partir de 0 le combat s'arrête
         if (heroHealthToInt <= 0 || monsterHealthToInt <= 0) {
@@ -34,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     currentHealthHero = 0;
                 }
 
+                battleMsgHero.textContent = "Prend ça dans ta mouille"
                 heroHealth.textContent = currentHealthHero + ' pv';
 
                 // Met à jour la vie de l'adversaire en fonction du résultat
@@ -46,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (currentHealthMonster < 0) {
                     currentHealthMonster = 0;
                 }
-
+                battleMonsterMsg.textContent = "Et toi va manger tes crottes de nez !"
                 monsterHealth.textContent = currentHealthMonster + ' pv';
             });
 

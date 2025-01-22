@@ -22,8 +22,8 @@ $hero = $_SESSION["hero"];
         <section class = "game">
             <hr>
             <div class="round">
-            <img src="<?= htmlspecialchars($hero->getimgPath()); ?>" alt="image du Héro">
-            <p>Texte suivant le jet de dés</p>
+            <p id="battleHeroMsg"></p>
+            <p id="battleMonsterMsg"></p>
         </div>
 
         <!-- Etat du jeu -->
