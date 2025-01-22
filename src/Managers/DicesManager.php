@@ -25,16 +25,15 @@ final class DicesManager
         return $rollResult;
     }
 
-    public function resultDices (int $numberRolls, int $numberDices, int $numberFaces) : array {
+    public function resultDices(int $numberRolls, int $numberDices, int $numberFaces): array
+    {
 
         $result = [];
 
         for ($i = 0; $i < $numberRolls; $i++) {
-          
+
             $result[] = $this->dicesRoll($numberDices, $numberFaces);
         }
-            return $result;  
-
+        return $result;
     }
-       
 }

@@ -6,3 +6,21 @@
     et donc une page de création avec CRUD bdd associée
 
 
+Faire en sorte que chaque perso qui combat est un jet de dés différent
+
+TESTS pour les dés
+
+$allResultsValid = true;
+
+if ($result < 1 || $result > $numberFaces) {
+        $allResultsValid = false;
+        echo "Test échoué : résultat $result hors des limites (1-$numberFaces)\n";
+        break;
+    }
+
+
+if ($allResultsValid) {
+    echo "Tous les tests ont réussi. La fonction simule correctement un lancer de dé.\n";
+} else {
+    echo "Certains tests ont échoué. La fonction ne simule pas correctement un lancer de dé.\n";
+}

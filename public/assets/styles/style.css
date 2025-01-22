@@ -36,12 +36,20 @@ h1 {
     font-variant: small-caps;
 }
 
-
 hr {
     border: solid;
     border-color: darkgoldenrod;
     width: 30vw;
     margin: 1vw 0 2vw 0;
+}
+
+button {
+    padding: 1vw;
+    cursor: pointer;
+    color:blanchedalmond;
+    background-color: cadetblue;
+    font-variant: small-caps;
+    font-size: 2rem;
 }
 
 .title {
@@ -174,6 +182,13 @@ hr {
 
 }
 
+.game {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+
+}
+
 
 /* Etat du jeu */
 div.game-state {
@@ -183,6 +198,7 @@ div.game-state {
     align-items: center;
     gap: 2vw;
     /* margin-bottom: 10rem; */
+    font-variant: small-caps;
 }
 
 div.game-state img {
