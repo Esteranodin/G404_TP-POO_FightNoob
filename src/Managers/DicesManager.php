@@ -4,7 +4,9 @@
 
 final class DicesManager
 {
-    // private int $dicesResult;
+    protected int $numberDices;
+    protected int $numberFaces;
+    protected int $numberRolls;
 
 
     public function getRandomInt(int $min, int $max): int
@@ -14,12 +16,25 @@ final class DicesManager
 
     public function dicesRoll(int $numberDices, int $numberFaces): int
     {
-        $dicesResult = 0;
+        $rollResult = 0;
 
         for ($i = 0; $i < $numberDices; $i++) {
-            $dicesResult += $this->getRandomInt(1, $numberFaces);
+            $rollResult += $this->getRandomInt(1, $numberFaces);
         }
 
-        return $dicesResult;
+        return $rollResult;
     }
+
+    public function resultDices (int $numberRolls, int $numberDices, int $numberFaces) : array {
+
+        $result = [];
+
+        for ($i = 0; $i < $numberRolls; $i++) {
+          
+            $result[] = $this->dicesRoll($numberDices, $numberFaces);
+        }
+            return $result;  
+
+    }
+       
 }

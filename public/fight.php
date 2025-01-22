@@ -10,8 +10,6 @@ $fightsManager = new FightsManager();
 $monster = $fightsManager->findMonster();
 $hero = $_SESSION["hero"];
 
-
-
 ?>
 
 <body>
@@ -30,12 +28,13 @@ $hero = $_SESSION["hero"];
         <div class="game-state">
             <figure>
                 <img src="<?= htmlspecialchars($hero->getimgPath()); ?>" alt="image du Héro">
-                <figcaption>124 pv</figcaption>
+                <figcaption><span id="heroHealth"><?= htmlspecialchars($hero->getHealth()); ?> pv </figcaption>
             </figure>
-            <h2>vs</h2>
+            <button type="button" id="rollDice">fight !</button>
+         
             <figure>
                 <img src="<?= htmlspecialchars($monster->getimgPath()); ?>" alt="image du monstre">
-                <figcaption>124 pv</figcaption>
+                <figcaption><span id="monsterHealth"><?= htmlspecialchars($monster->getHealth()); ?> pv </figcaption>
             </figure>
             
         </div>

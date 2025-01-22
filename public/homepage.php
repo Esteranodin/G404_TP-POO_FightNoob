@@ -14,27 +14,25 @@ require_once '../utils/autoloader.php';
 var_dump("hello") ;
 
 $dicesManager = new DicesManager();
-$numberOfRolls = 1;
-$numberFaces = 100;
-$numberDices = 1;
-// $allResultsValid = true;
+$resultsDices = $dicesManager->resultDices(2, 1, 6);
+var_dump($resultsDices);
 
-for ($i = 0; $i < $numberOfRolls; $i++) {
-    $result = $dicesManager->dicesRoll($numberDices, $numberFaces);
-    echo $result . "<br>";
-    // if ($result < 1 || $result > $numberFaces) {
-    //     $allResultsValid = false;
-    //     echo "Test échoué : résultat $result hors des limites (1-$numberFaces)\n";
-    //     break;
-    // }
+foreach ($resultsDices as $resultDices) {
+    echo $resultDices . "<br>";
 }
 
-// if ($allResultsValid) {
-//     echo "Tous les tests ont réussi. La fonction simule correctement un lancer de dé.\n";
-// } else {
-//     echo "Certains tests ont échoué. La fonction ne simule pas correctement un lancer de dé.\n";
-// }
 
+
+//  function implode(?array $resultDices): string ;
+// $numberRolls = 2;
+// $numberDices = 1;
+// $numberFaces = 6;
+
+
+// for ($i = 0; $i < $numberRolls; $i++) {
+//     $result = $dicesManager->dicesRoll($numberDices, $numberFaces);
+//     echo $result . "<br>";  
+// }
 
 ?>
 
