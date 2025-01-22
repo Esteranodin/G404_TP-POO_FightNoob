@@ -8,7 +8,7 @@ session_start();
 $dicesManager = new DicesManager();
 
 $resultsHero  = $dicesManager->resultDices(2, 1, 20); 
-$resultsMonster = $dicesManager->resultDices(1, 2, 100); 
+$resultsMonster = $dicesManager->resultDices(1, 2, 6); 
 
 $damagesByHero = array_sum($resultsHero);
 $damagesByMonster = array_sum($resultsMonster);
