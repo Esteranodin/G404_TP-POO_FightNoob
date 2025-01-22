@@ -3,8 +3,26 @@ require_once '../utils/autoloader.php';
 session_start();
 
 $dicesManager = new DicesManager();
-$results  = $dicesManager->resultDices(2, 1, 6); 
-$damages = array_sum($results); 
+
+$resultsHero  = $dicesManager->resultDices(2, 1, 20); 
+$resultsMonster = $dicesManager->resultDices(1, 1, 6); 
+
+$damagesByHero = array_sum($resultsHero);
+$damagesByMonster = array_sum($resultsMonster);
+
 
 header('Content-Type: application/json');
-echo json_encode(['damages' => $damages]);
+
+
+$resultat = [
+    'hero' => [
+        'results' => $resultsHero,
+        'damages' => $damagesByHero
+    ],
+    'monster' => [
+        'results' => $resultsMonster,
+        'damages' => $damagesByMonster
+    ]
+];
+
+echo json_encode($resultat);

@@ -2,6 +2,7 @@
 
 // ajouter secu = enfant de securiteManager
 
+/** Instance qui permet de créer avec la méthode resultDice les jets de dés */
 final class DicesManager
 {
     protected int $numberDices;
@@ -24,6 +25,8 @@ final class DicesManager
 
         return $rollResult;
     }
+
+    /** Jet de dés = nombre de jetés / nombre de dés / nombre de faces */
 
     public function resultDices(int $numberRolls, int $numberDices, int $numberFaces): array
     {

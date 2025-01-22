@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const heroHealth = document.querySelector("#heroHealth");
 
                 let currentHealthHero = heroHealthToInt;
-                currentHealthHero -= data.damages;
+                currentHealthHero -= data.monster.damages;
 
                 //si les PV tombe en dessous de 0 on écrit 0 pour permettre la vérification du premier if
                 if (currentHealthHero < 0) {
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const monsterHealth = document.querySelector("#monsterHealth");
 
                 let currentHealthMonster = monsterHealthToInt;
-                currentHealthMonster -= data.damages;
+                currentHealthMonster -= data.hero.damages;
 
                 //si les PV tombe en dessous de 0 on écrit 0 pour permettre la vérification du premier if
                 if (currentHealthMonster < 0) {

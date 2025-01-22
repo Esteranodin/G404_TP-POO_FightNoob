@@ -23,17 +23,6 @@ foreach ($resultsDices as $resultDices) {
 
 
 
-//  function implode(?array $resultDices): string ;
-// $numberRolls = 2;
-// $numberDices = 1;
-// $numberFaces = 6;
-
-
-// for ($i = 0; $i < $numberRolls; $i++) {
-//     $result = $dicesManager->dicesRoll($numberDices, $numberFaces);
-//     echo $result . "<br>";  
-// }
-
 ?>
 
-        <script defer src="./assets/scripts/play.js"></script>
+
