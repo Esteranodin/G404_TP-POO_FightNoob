@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     currentHealthHero = 0;
                 }
 
-                battleMsgHero.textContent = "Prend ça dans ta mouille"
+                battleMsgHero.textContent = "Prend " + data.hero.damages + " dégâts dans ta mouille"
                 heroHealth.textContent = currentHealthHero + ' pv';
 
                 // Met à jour la vie de l'adversaire en fonction du résultat
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (currentHealthMonster < 0) {
                     currentHealthMonster = 0;
                 }
-                battleMonsterMsg.textContent = "Et toi va manger tes crottes de nez !"
+                battleMonsterMsg.textContent = "Et toi va manger " + data.monster.damages + " dégâts et tes crottes de nez !"
                 monsterHealth.textContent = currentHealthMonster + ' pv';
             });
 
