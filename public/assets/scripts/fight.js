@@ -19,6 +19,25 @@ document.addEventListener("DOMContentLoaded", function () {
         if (heroHealthToInt <= 0 || monsterHealthToInt <= 0) {
 
             fightWithDices.removeEventListener("click", handleFight);
+
+            // Affiche un message de victoire ou de défaite
+            if (heroHealthToInt <= 0) {
+                battleMsgHero.textContent = "Défaite du héros !";
+                battleMonsterMsg.textContent = "";
+            }
+
+            else if (monsterHealthToInt <= 0) {
+                battleMsgHero.textContent = "Victoire du héros !";
+                battleMonsterMsg.textContent = "";
+
+            }
+
+            // if (heroHealthToInt <= 0) {
+            //     alert("Défaite du héros !");
+            // } else if (monsterHealthToInt <= 0) {
+            //     alert("Victoire du héros !");
+            // }
+
             return;
         }
 
@@ -52,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
                 battleMonsterMsg.textContent = "Et toi va manger " + data.monster.damages + " dégâts et tes crottes de nez !"
                 monsterHealth.textContent = currentHealthMonster + ' pv';
+
             });
 
     }

@@ -1,11 +1,14 @@
 <?php
+
+// process qui va attribuer les dés au héro et au monstre joués
+
 require_once '../utils/autoloader.php';
 session_start();
 
 $dicesManager = new DicesManager();
 
 $resultsHero  = $dicesManager->resultDices(2, 1, 20); 
-$resultsMonster = $dicesManager->resultDices(1, 1, 6); 
+$resultsMonster = $dicesManager->resultDices(1, 2, 100); 
 
 $damagesByHero = array_sum($resultsHero);
 $damagesByMonster = array_sum($resultsMonster);

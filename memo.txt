@@ -5,8 +5,17 @@
     2. création de héro
     et donc une page de création avec CRUD bdd associée
 
+    -> faire des sets de dés suivant :
+    1. une classe
+    2. des compétences
+    ...
 
-Faire en sorte que chaque perso qui combat est un jet de dés différent
+    -> ajouter des jets d'initiative, de sauvegarde pour se défendre, de dégâts...
+
+    -> faire des boutons avec des attaqus différentes
+
+    -> enchaîner sur un autre combat ou revenir à l'accueil et si enchainement sur un autre combat alors peut etre garder niveau du perso en bdd surtout si création d'un compte
+
 
 TESTS pour les dés
 
